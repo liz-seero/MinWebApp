@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Plain JS Minimal App</title>
+  <script src="src/c/initialize.js"></script>
+  <script src="src/m/Page.js"></script>
+  <script src="src/v/peopleCountView.js"></script>
+
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<script>
+  window.addEventListener("load", pl.v.peopleCountView.setupUserInterface);
+ </script>
+
+<style>
+    div {
+      max-width: 1000px;
+      max-height: 1000px;
+      
+    }
+    </style>
+
+
+    <body>
+
+        <header>
+        <h1>Generate Popular Person View</h1>
+        <a href="index.html">Back to main menu</a>
+
+        </header>
+
+        <p id="demo">Click the button to generate the five most popular people.</p>
+
+
+        <main>
+            <button id="mainButton">Can to generate People</button>
+        </main>
+
+
+        <h2>View Chart</h2>
+
+        <input id="userPInput" type="text" placeholder="Type search term here">
+
+        <button type= "button" onclick="redraw()">Generate</button> 
+
+        
+        <script>
+          google.charts.load('current', {packages: ['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+          
+
+          let input = document.getElementById("userPInput").value;
+
+
+        function redraw() {
+
+          let input = document.getElementById("userPInput").value;
+          
+
+        // Set Data
+        var data = google.visualization.arrayToDataTable(
+          pl.v.peopleCountView.createChartData(input)
+        );
+        // Set Options
+        var options = {
+          title: 'History of Emotional Rating in page descriptions for the person: '+ input,
+          hAxis: {title: 'Person'},
+          vAxis: {title: 'Emotional Rating'},
+          legend: 'none'
+        };
+
+        // Draw Chart
+        var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+        chart.draw(data, options);
+        }
+
+        </script>
+
+        <p id="demo">Below is a chart of the most popular person using the emotional rating given for the description in that page.</p>
+        <div id="myChart"/> 
+        <script>
+            google.charts.load('current', {packages: ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            
+        
+          function drawChart() {
+          // Set Data
+          var data = google.visualization.arrayToDataTable(pl.v.peopleCountView.createChartData(pl.v.peopleCountView.getPerson(0)));
+          // Set Options
+          var options = {
+            title: 'History of Emotional Rating in page descriptions for the person:' + pl.v.peopleCountView.getPerson(0),
+            hAxis: {title: 'Page'},
+            vAxis: {title: 'Emotional Rating'},
+            legend: 'none'
+          };
+          // Draw Chart
+          var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+          chart.draw(data, options);
+          }
+        
+        
+          </script>
+
+
+
+
+       
+
+    </body>
+
+</html>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="svg3418"
+    sodipodi:docname="warning-19.svg"
+    viewBox="0 0 1539.4 514.15"
+    version="1.1"
+    inkscape:version="0.48+devel r"
+  >
+  <sodipodi:namedview
+      id="base"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      inkscape:window-y="518"
+      fit-margin-left="0"
+      pagecolor="#ffffff"
+      fit-margin-top="0"
+      inkscape:window-maximized="0"
+      inkscape:zoom="0.35"
+      inkscape:window-x="417"
+      inkscape:window-height="463"
+      showgrid="false"
+      borderopacity="1.0"
+      inkscape:current-layer="layer1"
+      inkscape:cx="673.78608"
+      inkscape:cy="398.5955"
+      fit-margin-right="0"
+      fit-margin-bottom="0"
+      inkscape:window-width="595"
+      inkscape:pageopacity="0.0"
+      inkscape:document-units="px"
+  />
+  <g
+      id="layer1"
+      inkscape:label="Calque 1"
+      inkscape:groupmode="layer"
+      transform="translate(755.93 -1102.5)"
+    >
+    <g
+        id="g1123"
+        inkscape:export-ydpi="14.610658"
+        inkscape:export-xdpi="14.610658"
+        inkscape:export-filename="/home/yves/Bureau/openclipart/advertising.png"
+        transform="matrix(10.635 0 0 10.635 -907.15 951.31)"
+      >
+      <path
+          id="path1124"
+          d="m120.04 15.722h-38.509l75.924 40.143v-20.361l-37.415-19.782z"
+          style="fill:#000000"
+          inkscape:connector-curvature="0"
+      />
+      <path
+          id="path1125"
+          d="m157.46 15.722h-37.415l37.415 19.782v-19.782z"
+          style="fill:#ffcc00"
+          inkscape:connector-curvature="0"
+      />
+      <path
+          id="path1126"
+          d="m42.278 15.722 85.781 45.355h29.396v-5.2117l-75.391-40.322-39.791 0.179z"
+          style="fill:#ffcc00"
+          inkscape:connector-curvature="0"
+          sodipodi:nodetypes="cccccc"
+      />
+      <path
+          id="path1127"
+          d="m15.722 15.722v7.4058l71.774 37.949h40.562l-85.781-45.355h-26.555z"
+          style="fill:#000000"
+          inkscape:connector-curvature="0"
+      />
+      <path
+          id="path1128"
+          d="m15.722 43.882 32.522 17.195h39.253l-71.774-37.949v20.754z"
+          style="fill:#ffcc00"
+          inkscape:connector-curvature="0"
+      />
+      <path
+          id="path1129"
+          d="m15.722 61.077h32.522l-32.522-17.195v17.195z"
+          style="fill:#000000"
+          inkscape:connector-curvature="0"
+      />
+      <path
+          id="path1130"
+          d="m157.46 61.077v-45.355h-141.73v45.355h141.73z"
+          style="stroke:#000000;stroke-width:3;fill:none"
+          inkscape:connector-curvature="0"
+      />
+    </g
+    >
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >warning</dc:title
+        >
+        <dc:date
+          >2010-10-23T19:20:13</dc:date
+        >
+        <dc:description
+        />
+        <dc:source
+          >https://openclipart.org/detail/92335/warning-by-yves_guillou-92335</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >yves_guillou</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >warning</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

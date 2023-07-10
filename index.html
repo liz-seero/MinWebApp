@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journal Program</title>
+    <script src = "src/c/initialize.js"></script>
+    <script src="src/m/Page.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+      * {
+  box-sizing: border-box;
+}
+      .column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+    </style>
+  </head>
+
+  <header>
+    <h1 style = "text-align:center;">Life Tracking and Reflective Tool</h1>
+
+  </header>
+
+  <body>
+
+    <h2 style = "text-align:center;">Take back your data, information tracking for self reflection</h2>
+
+
+    <div class="row">
+      <div class="column" style = "text-align:center;border-style:solid;border-color:rgb(187, 126, 237);">
+        <h2 style = "text-align:center; background-color: black; color: aliceblue;">Create a page</h2>
+
+        
+        <a href="createPage.html" ><button type="button" style = "border-style:solid;border-color:rgb(187, 126, 237);">  
+          <img src = "ftbookmarks-list-add.svg" width ="70">
+        </button></a> 
+        
+        <p style="font-size: 1.5vw;">
+          Pages are a way to keep track of life events, from work to class. Pages describe an event from a particular day, but no details are required if you can't remember.  
+        </p>
+    
+      </div>
+      <div class="column" style = "display: flex;
+          justify-content: center;">
+        <img src = "Organization-group.svg" width = "400" height = "300"/>
+      </div>
+    </div>
+
+
+    <div class="row" >
+      <div class="column" style="text-align:center;" >
+        <h3 style = "text-align:center;background-color: black; color: aliceblue;">View Pages  </h3>
+        <div><a href="retrieveAndListAllPages.html"><button type="button" style = "border-style:solid;border-color:rgb(187, 126, 237);"> <img src = "ftview-detailed.svg" width="80" height = "70"></button></a> </div>
+        <p style="font-size: 1.5vw;">See all pages listed together, with all information available for that event. You can also update, create, and delete pages from this site. </p>
+
+      </div>
+      <div class="column" style="text-align:center;border-style:solid;border-color:rgb(203, 46, 127);">
+        <h3 style = "text-align:center;background-color: black; color: aliceblue;">Edit Pages</h3>
+        <a href="updatePage.html"><button type="button" style = "border-style:solid;border-color:rgb(126, 194, 237);"><img src = "cyberscooty-update.svg" width="120" height = "70"> a Page</button></a> </li>
+        
+        <a href="deletePage.html" ><button type="button" style = "border-style:solid;border-color:rgb(126, 194, 237);"> <img src = "trash.svg" width = "55"> a Page</button></a>  
+        <div style="text-align:center;"> <p>In order to save a copy or upload a file:</p>
+           <a href="importPages.html"><button type="button">Import<img src="ftfileimport.svg"width = "55"><img src="ftfileexport.svg" width = "55">Export</button>
+            </a>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row" >
+
+      <div class="column" style = "border-style:solid;border-color:rgb(59, 138, 160);text-align: center;">
+        <h3 style = "text-align:center;background-color: black; color: aliceblue;">Reflection Tools</h3>
+ 
+      <p style="font-size: 1.5vw;">In order to track different elements of your life, create graphical representations of the emotional impact of different people, places, activities, and more. </p>
+
+        
+       <li style="text-align:left"> <a href ="wordCountView.html" ><button  type = "button">Description Analysis</button></a></li>
+        <li style="text-align:left"><a href ="peopleCountView.html"><button type = "button">Person Analysis</button></a></li>
+        <li style="text-align:left"><a href ="cycleView.html"><button type = "button">Cycle View</button></a></li>
+
+
+      </div>
+      <div class="column" style = "display: flex;
+      justify-content: center;">
+
+        <img src = "Progress-Chart-Loss.svg" width = "200" height = "200" style="transform: translateY(+20%);"/>
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class="row" >
+
+      <div class="column" style = "display: flex;
+      justify-content: center;">
+      
+      <hgroup vertical-align=" middle"> 
+        <p text-align="center">*Remember to export the current version of your pages and THEN delete all files in order to clear this device, without loosing your information.
+          You make choose to leave your data on this browser on this device, but Recovery Connection
+          advises that you store your data elsewhere by exporting your pages, and then importing them when you are ready.  *</p>
+     
+        <img src="warning-20.svg" height="40%"  text-align="center" style="display: flex;
+        justify-content: center; margin-left: auto;
+  margin-right: auto;">
+
+
+      </hgroup>
+
+
+      </div>
+
+      <div class="column" style = "text-align: center;border-style:solid;border-color:rgb(28, 162, 55);">
+
+        <h3 style = "text-align:center;background-color: black; color: aliceblue;" >Delete All Information or Create Sample Test Data</h3>
+        <hgroup>
+          <button type="button" onclick="Page.clearData()" height="20%">
+            
+              Clear all history
+              <img src="icons8-delete-document-64.png">
+            on this device
+
+         
+            </button>
+          <p text-align="left">Want to explore the website without putting in your own data? Use the Generate Test Data to import a pre-made archive of pages.</p>
+          <li style="text-align:left"><button type= "button" onclick="Page.generateTestData()">Generate</button> test data</li>
+        </hgroup>
+      </div>
+  
+    </div>
+
+
+
+
+
+        
+   
+  </body>
+
+
+  
+
+</html>
+
+

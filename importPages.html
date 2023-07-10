@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Journal Program</title>
+    <script src = "src/c/initialize.js"></script>
+    <script src="src/m/Page.js"></script>
+    <script src="src/v/importPages.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Import / Export All Pages</h1>
+    <a href="index.html">Back to main menu</a>
+  
+   </header>
+
+  <hgroup>
+    <h2 ><u>Import Pages</u></h2>
+    <p style = "margin-left: 6%;">*Only  .txt files that were created by this program through exporting will work*</p>
+    <p style = "margin-left: 6%;">Remember to delete your data once finished using the program on this device. </p>
+    <input type="file" id="file-selector" accept=".txt" style = "margin-left: 6%;">
+    <div id="res" style = "margin-left: 6%;"></div>
+  </hgroup>
+
+    <!--creates the choose file button-->
+
+
+
+    <script>
+      const fileSelector = document.getElementById('file-selector');
+
+      fileSelector.addEventListener('change', function() {
+        var file_reader = new FileReader();
+        file_reader.onload=function(){
+            document.getElementById('res').textContent=file_reader.result;
+            var str=""; 
+            str = String(document.getElementById('res').textContent);
+            //console.log("in html"+str);
+            pl.v.importPages._handleImport(str);
+        }
+        //var str = "";
+        file_reader.readAsText(this.files[0]);
+        //pl.v.importPages.handleImport(str);
+        
+        //<!--clear the data base & then add it to local storage-->
+        
+      });
+
+      
+    </script>
+  <!--
+    <button type="button" onclick="pl.v.importPages._handleExport()">Export all Pages</button>
+
+  -->
+  <h2><u>Export All Pages</u></h2>
+  <button type="button" onclick="saveFile()" style = "margin-left: 6%;">Export <img src="ftfileexport.svg"></button>
+
+  <script>
+      function saveFile(){
+        let data = pl.v.importPages.createData();
+
+    const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'myPageData.txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+
+
+      }
+
+  </script>
+  <h2><u>Export by Word Search</u></h2>
+  <p>Can sny name of a person, word from a title, or within the description.</p>
+
+  <input id="userInput" type="text" placeholder="Type search term here">
+  <button type="button" onclick="pl.v.importPages.handleSearchAndSave()" > Create report</button>
+
+
+<footer>
+  <a href="index.html">Back to main menu</a>
+
+</footer>    
+
+</body>
+
+</html>

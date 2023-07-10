@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Plain JS Minimal App</title>
+  <script src="src/c/initialize.js"></script>
+  <script src="src/m/Page.js"></script>
+  <script src="src/v/cycleView.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+  <script>
+   window.addEventListener("load", pl.v.cycleView.setupUserInterface);
+  </script>
+</head>
+<body>
+ <header>
+  <h1>View Emotional Cycles</h1>
+  <a href="index.html">Back to main menu</a>
+
+ </header>
+ <main>
+<p style = "margin-left: 6%; width:80%;">The Pages with  <span style="color: #28b64e">green text </span>are the high points of the emotional cycle.
+Pages that indicate the low part of the emotional cycle have  <span style="color: #ff0000">red text</span>. 
+</p>
+<p style = "margin-left: 6%;width:90%;">The first and last pages are not considered. Events from green through red might indicate a negative mood swing, where a red to green range might indicate the steps necessary to trigger a positive mood swing.</p>
+
+    <table id = "pages">
+        <thead><tr><th>TITLE:</th><th>DESC:</th><th>PEOPLE:</th><th>EMOTIONAL RATING:</th><th>START DATE:</th><th>END DATE:</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+ </main>
+
+ <h4>Other Analysis Views</h4>
+ <li style="text-align:left; margin-left:6%;"> <a href ="wordCountView.html" ><button  type = "button">Description Analysis</button></a></li>
+ <li style="text-align:left;margin-left:6%;"><a href ="peopleCountView.html"><button type = "button">Person Analysis</button></a></li>
+ 
+
+ <footer>
+
+  <a href="index.html">Back to main menu</a>
+ </footer>
+</body>
+</html>

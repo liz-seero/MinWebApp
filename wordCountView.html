@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Plain JS Minimal App</title>
+  <script src="src/c/initialize.js"></script>
+  <script src="src/m/Page.js"></script>
+  <script src="src/v/wordCountView.js"></script>
+
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<script>
+  window.addEventListener("load", pl.v.wordCountView.setupUserInterface);
+ </script>
+
+<style>
+  div {
+    max-width: 1000px;
+    max-height: 1000px;
+    
+  }
+  </style>
+
+
+<body>
+
+  <header>
+    
+  <h1>Generate Popular Word View</h1>
+  <a href="index.html">Back to main menu</a>
+
+  </header>
+
+  <p id="demo">Click the button to generate the five most popular words in your page descriptions.</p>
+
+
+  <main>
+    <button id="mainButton">Click to generate words</button>
+  </main>
+
+
+
+  <h2>View Chart</h2>
+  <p>Search for words with the search bar, if the word is not present then the graph will show a cross with a point in the middle at 0. 
+    You can search from the titles of pages as well. 
+  </p>
+
+  <input id="userInput" type="text" placeholder="Type search term here">
+
+  <button type= "button" onclick="redrawChart()">Generate</button> 
+
+
+  <script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(redrawChart);
+    
+
+    let input = document.getElementById("userInput").value;
+
+
+  function redrawChart() {
+
+    let input = document.getElementById("userInput").value;
+    
+
+  // Set Data
+  // var data = google.visualization.arrayToDataTable(
+  //   pl.v.wordCountView.createChartData(input)
+  // );
+  var data = new google.visualization.DataTable();
+  data.addColumn('number', 'Page');
+  data.addColumn('number', 'emoRate');
+  data.addRows(pl.v.wordCountView.createChartData(input));
+  // Set Options
+  var options = {
+    title: 'History of Emotional Rating in page descriptions for the word: '+ input,
+    hAxis: {title: 'Page'},
+    vAxis: {title: 'Emotional Rating'},
+    legend: 'none'
+  };
+
+  // Draw Chart
+  var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+  }
+
+  </script>
+
+  <p id="chart_desc">Below is a chart of the most popular word using the emotional rating given for the description in that page.</p>
+
+  
+  <div id="myChart"/>
+
+
+
+
+  <script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+
+  function drawChart() {
+  // Set Data
+  var data = google.visualization.arrayToDataTable(pl.v.wordCountView.createChartData(pl.v.wordCountView.getWord(0)));
+  // Set Options
+  var options = {
+    title: 'History of Emotional Rating in page descriptions for the word: '+ pl.v.wordCountView.getWord(0),
+    hAxis: {title: 'Page'},
+    vAxis: {title: 'Emotional Rating'},
+    legend: 'none'
+  };
+  // Draw Chart
+  var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+  }
+
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>
